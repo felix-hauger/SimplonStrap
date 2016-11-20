@@ -1,0 +1,180 @@
+
+/*-Elements Positions*/
+
+/*to place object in corners of its closest positioned ancestor*/
+.topright {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.bottomright {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+/*positionned with float*/
+.goleft {
+  float:left;
+}
+.goright {
+  float: right;
+}
+
+/*place a div with this class between two others to ignore float, for these to place below */
+.clearfix {
+  clear: both;
+}
+
+/*-Elements properties : property precision value*/
+  /*? em ou %? factoriser les commentaires ?*/
+/*-Padding */
+/*padding small*/
+.paddingS {
+  padding: 2%;
+}
+/*margin medium*/
+.paddingM {
+  padding: 7%;
+}
+/*margin large*/
+.paddingL {
+  padding: 15%;
+}
+
+/*padding top small*/
+.paddingtopS {
+  padding-top: 2%;
+}
+/*padding top medium*/
+.paddingtopM {
+  padding-top: 7%;
+}
+/*padding top large*/
+.paddingtopL {
+  padding-top: 15%;
+}
+
+/*padding right small*/
+.paddingrightS {
+  padding-right: 2%;
+}
+/*padding right medium*/
+.paddingrightM {
+  padding-right: 7%;
+}
+/*padding right large*/
+.paddingrightL {
+  padding-right: 15%;
+}
+
+/*padding bottom small*/
+.paddingbottomS {
+  padding-bottom: 2%;
+}
+/*padding bottom medium*/
+.paddingbottomM {
+  padding-bottom: 7%;
+}
+/*padding bottom large*/
+.paddingbottomL {
+  padding-bottom: 15%;
+}
+
+/*padding left small*/
+.paddingleftS {
+  padding-left: 2%;
+}
+/*padding left medium*/
+.paddingleftM {
+  padding-left: 7%;
+}
+/*padding left large*/
+.paddingleftL {
+  padding-left: 15%;
+}
+/*-Marges externes ou margin :  (em ou %?)*/
+/*margin small*/
+.marginS {
+  margin: 2%;
+}
+/*margin medium*/
+.marginM {
+  margin: 7%;
+}
+/*margin large*/
+.marginL {
+  margin: 15%;
+}
+
+/*margin top small*/
+.margintopS {
+  margin-top: 2%;
+}
+/*margin top medium*/
+.margintopM {
+  margin-top: 7%;
+}
+/*margin top large*/
+.margintopL {
+  margin-top: 15%;
+}
+
+/*margin right small*/
+.marginrightS {
+  margin-right: 2%;
+}
+/*margin right medium*/
+.marginrightM {
+  margin-right: 7%;
+}
+/*margin right large*/
+.marginrightL {
+  margin-right: 15%;
+}
+
+/*margin bottom small*/
+.marginbottomS {
+  margin-bottom: 2%;
+}
+/*margin bottom medium*/
+.marginbottomM {
+  margin-bottom: 7%;
+}
+/*margin bottom large*/
+.marginbottomL {
+  margin-bottom: 15%;
+}
+
+/*margin left small*/
+.marginleftS {
+  margin-left: 2%;
+}
+/*margin left medium*/
+.marginleftM {
+  margin-left: 7%;
+}
+/*margin left large*/
+.marginleftL {
+  margin-left: 15%;
+}
+
+/*barre de navigation horizontale*/
+.navbar {
+
+}
+
+.img-rounded {
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
