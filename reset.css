@@ -6,13 +6,12 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
+ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
+table, caption,
+article, aside, canvas,
 figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video  {
+menu, nav, output, section {
   margin: 0;
   padding: 0;
   border: 0;
@@ -22,7 +21,7 @@ time, mark, audio, video  {
 }
 
 /*To remove bullets from bulleted lists*/
-ol, ul {
+ul {
 	list-style: none;
 }
 /*To remove underlining or any other effect on links*/

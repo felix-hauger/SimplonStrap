@@ -12,23 +12,44 @@ div, textarea, table, td, th, code, pre, samp {
 /*-Elements Positions*/
 
 /*to place object in corners of its closest positioned ancestor*/
-.topright {
+.abstopright {
   position: absolute;
   top: 0;
   right: 0;
 }
-.topleft {
+.abstopleft {
   position: absolute;
   top: 0;
   left: 0;
 }
-.bottomright {
+.absbottomright {
   position: absolute;
   bottom: 0;
   right: 0;
 }
-.bottomleft {
+.absbottomleft {
   position: absolute;
+  bottom: 0;
+  left: 0;
+}
+/*to place object fixed in screen corners*/
+.fixtopright {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.fixtopleft {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.fixbottomright {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.fixbottomleft {
+  position: fixed;
   bottom: 0;
   left: 0;
 }
@@ -98,29 +119,23 @@ div, textarea, table, td, th, code, pre, samp {
 }
 
 .paddingaxS {
-  padding-left: 2em;
-  padding-right: 2em;
+  padding: 0 2em;
 }
 .paddingaxM {
-  padding-left: 7em;
-  padding-right: 7em;
+  padding: 0 7em;
 }
 .paddingaxL {
-  padding-left: 15em;
-  padding-right: 15em;
+  padding: 0 15em;
 }
 
 .paddingayS {
-  padding-left: 2em;
-  padding-right: 2em;
+  padding: 2em 0;
 }
 .paddingayM {
-  padding-left: 7em;
-  padding-right: 7em;
+  padding: 7em 0;
 }
 .paddingayL {
-  padding-left: 15em;
-  padding-right: 15em;
+  padding: 15em 0;
 }
 
 /*-Margins*/
@@ -175,30 +190,30 @@ div, textarea, table, td, th, code, pre, samp {
 }
 
 .marginaxS {
-  margin-left: 2em;
-  margin-right: 2em;
+  margin: 0 2em;
 }
 .marginaxM {
-  margin-left: 7em;
-  margin-right: 7em;
+  margin: 0 7em;
 }
 .marginaxL {
-  margin-right: 15em;
-  margin-left: 15em;
+  margin: 0 15em;
 }
 
 .marginayS {
-  margin-left: 2em;
-  margin-right: 2em;
+  margin: 2em 0;
 }
 .marginayM {
-  margin-left: 7em;
-  margin-right: 7em;
+  margin: 7em 0;
 }
 .marginayL {
-  margin-right: 15em;
-  margin-left: 15em;
+  margin: 15em 0;
 }
+
+/*a class to center an object horizontally*/
+.center {
+  margin: 0 auto;
+}
+
 /*barre de navigation horizontale*/
 .navbar {
 
