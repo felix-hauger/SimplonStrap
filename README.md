@@ -4,7 +4,7 @@
 
 # classes for control margin/padding of html elements, work like : 'property precision value' or 'property value' if precision not needed.
 # Properties: margin, padding, border
-# Precisions: top, right, bottom, left
+# Precisions: top, right, bottom, left, ax(axe x), ay(axe y)
 # Values: L(large), M(medium), S(small).
 # Ex: for a small padding to the right : paddingrightS ; for a general large margin : marginL
 #
