@@ -1,3 +1,7 @@
+body{
+  margin: 0;
+  padding: 0;
+}
 header {
     position: fixed;
     z-index: 1;
@@ -13,7 +17,7 @@ header ul {
     display: flex;
     padding: 0;
     margin: 0;
-    font-family: atami_reg;
+    font-family: arial;
     background-color: transparent;
     height: 40px;
 }
@@ -26,15 +30,15 @@ header ul li {
     list-style: none;
     justify-content: center;
     padding: 10px 0px;
-    background-color: lightblue;
-    color: black;
+    background-color: #ecf0f1;
+    color: #7f8c8d;
     font-size: 1.2em;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-left: 1px solid #bdc3c7;
+    border-right: 1px solid #bdc3c7;
 }
 
 header ul li:hover {
-    box-shadow: inset 0px 3px 5px black;
-    padding-top: 13px;
+    box-shadow: inset 0 3px 5px #7f8c8d;
+    border-top: 13px;
     transition: 0.2s;
 }
