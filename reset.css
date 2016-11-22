@@ -1,16 +1,16 @@
 /*To formate DOM's content to its base value*/
 /*To remove any margin or border, reset font size & font style, reset the vertical alignment to its default value*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
+html, body, div, span, applet,
+h1, h2, h3, h4, h5, h6, p, blockquote,
+a, big, cite, code,
+em, img,
+small, strike, strong, sub, sup, tt,
 b, u, i, center,
 ol, ul, li,
-fieldset, form, label, legend,
+form, label, legend,
 table, caption,
 article, aside, canvas,
-figure, figcaption, footer, header, hgroup,
+figure, figcaption, footer, header,
 menu, nav, output, section {
   margin: 0;
   padding: 0;

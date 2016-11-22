@@ -7,7 +7,14 @@ div, textarea, table, td, th, code, pre, samp {
     -o-hyphens: auto;
     hyphens: auto;
 }
-
+/*To remove bullets from bulleted lists*/
+ul {
+	list-style: none;
+}
+/*To remove underlining or any other effect on links*/
+a {
+  text-decoration: none;
+}
 
 /*-Elements Positions*/
 
@@ -258,18 +265,40 @@ div, textarea, table, td, th, code, pre, samp {
   width: 1000px;
 }
 
+/*1 huitième du parent*/
+.w1-8 {
+  width: calc(100%/8);
+}
+/*1 septième du parent*/
+.w1-7 {
+  width: calc(100%/7);
+}
+/*1 sixième du parent*/
+.w1-6 {
+  width: calc(100%/6);
+}
+/*1 cinquième du parent*/
+.w1-5 {
+  width: calc(100%/5);
+}
+/*1 quart du parent*/
+.w1-4 {
+  width: calc(100%/4);
+}
+/*1 tier du parent*/
 .w1-3 {
   width: calc(100%/3);
 }
+/*2 tiers du parent*/
 .w2-3 {
   width: calc(100%*2/3);
 }
+/*moitié du parent*/
 .w1-2 {
   width: 50%;
 }
 
 /*height*/
-/*pixel values*/
 .h100p {
   height: 100px;
 }
