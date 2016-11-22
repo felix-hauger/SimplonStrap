@@ -21,10 +21,11 @@ menu, nav, output, section {
 }
 
 /*To remove bullets from bulleted lists*/
-ul {
+ul, li {
 	list-style: none;
 }
 /*To remove underlining or any other effect on links*/
 a {
   text-decoration: none;
+  color: black;
 }
