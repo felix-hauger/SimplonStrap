@@ -1,19 +1,85 @@
+
+/* hyphens & too long words go to next line */
+div, textarea, table, td, th, code, pre, samp {
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+}
+/*To formate DO-m, 's content to its base value*/
+/*To remove any margin or border, reset font size & font style, reset the vertical alignment to its default value*/
+html, body, div, span, applet,
+h1, h2, h3, h4, h5, h6, p, blockquote,
+a, big, cite, code,
+em, img,
+small, strike, strong, tt,
+b, u, i,
+ol, ul, li,
+form, label, legend,
+table,
+article, aside, canvas,
+figure, figcaption, footer, header,
+menu, nav, output, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+	font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/*To remove bullets from bulleted lists*/
+ul, li {
+	list-style: none;
+}
+/*To remove underlining or any other effect on links*/
+a, a:target, a:visited, a:active {
+  text-decoration: none;
+  color: black;
+}
+/*- Flex*/
+
+.flex {
+  display: flex;
+}
+/*To */
+.flexwrap, .fwrap {
+  flex-wrap: wrap;
+}
+.flexcol, .fcol {
+  flex-direction: column;
+}
+.flexrow, .frow {
+  flex-direction: row;
+}
+.flex {
+  align-items: center;
+  align-items: flex-start;
+  align-items: flex-end;
+  align-items: baseline;
+}
+
+/*Inline element with modifiables dimensions*/
+.inlineblock, .inbl {
+  display: inline-block;
+}
+
 /* Grille responsive */
 
-.grille, .borderbox{
+.grid, .borderbox{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
+/* Grid Display*/
 
-/* Display de la Grille et des enfants*/
-
-.grille {
+.grid {
     display: block;
     clear: both;
 }
-
 
 /* Regle fixant la largeur de l'espace externe (double de l'espace interne) */
 
@@ -25,85 +91,469 @@
     padding-right: 20px;
 }
 
-
-/* Annule les espace entre element*/
+/* Cancel spaces between elements*/
 
 .no-space {
     padding: 0;
 }
 
-
 /* Largeur des elements */
 /*--1/12--*/
-.grid .un-douze, .grid .w-1-12 {
+.grid .one-twelve, .grid .w-1-12 {
     width: calc(100%/12);
     float: left;
     padding: 10px;
 }
 /*--2/12--*/
-.grid .deux-douze, .grid .w-1-6, .grid .w-2-12 {
+.grid .two-twelve, .grid .w-1-6, .grid .w-2-12 {
     width: calc(100%/6);
     float: left;
     padding: 10px;
 }
 /*--3/12--*/
-.grid .trois-douze, .grid .w-1-4, .grid .w-3-12 {
+.grid .three-twelve, .grid .w-1-4, .grid .w-3-12 {
     width: calc(300%/12);
     float: left;
     padding: 10px;
 }
 /*--4/12--*/
-.grid .quatre-douze, .grid .w-1-3,.grid .w-2-6, .grid .w-4-12 {
+.grid .four-twelve, .grid .w-1-3,.grid .w-2-6, .grid .w-4-12 {
     width: calc(100%/3);
     float: left;
     padding: 10px;
 }
 /*--5/12--*/
-.grid .cinq-douze, .grid .w-5-12 {
+.grid .five-twelve, .grid .w-5-12 {
     width: calc(500%/12);
     float: left;
     padding: 10px;
 }
 /*--6/12--*/
-.grid .six-douze, .grid .w-1-2, .grid .w-2-4, .grid .w-3-6, .grid .w-6-12{
+.grid .six-twelve, .grid .w-1-2, .grid .w-2-4, .grid .w-3-6, .grid .w-6-12{
     width: 50%;
     float: left;
     padding: 10px;
 }
 /*--7/12--*/
-.grid .sept-douze, .grid .w-7-12 {
+.grid .seven-twelve, .grid .w-7-12 {
     width: calc(700%/12);
     float: left;
     padding: 10px;
 }
 /*--8/12--*/
-.grid .huit-douze, .grid .w-2-3,.grid .w-4-6, .grid .w-8-12 {
+.grid .eight-twelve, .grid .w-2-3,.grid .w-4-6, .grid .w-8-12 {
     width: calc(200%/3);
     float: left;
     padding: 10px;
 }
 /*--9/12--*/
-.grid .neuf-douze, .grid .w-3-4, .grid .w-9-12 {
+.grid .nine-twelve, .grid .w-3-4, .grid .w-9-12 {
     width: 75%;
     float: left;
     padding-right: 10px;
     padding-bottom: 10px;
 }
 /*--10/12--*/
-.grid .dix-douze, .grid .w-5-6, .grid .w-10-12 {
+.grid .ten-twelve, .grid .w-5-6, .grid .w-10-12 {
     width: calc(500%/6);
     float: left;
     padding: 10px;
 }
 /*--11/12--*/
-.grid .onze-douze, .grid .w-11-12 {
+.grid .onze-twelve, .grid .w-11-12 {
     width: calc(1100%/12);
     float: left;
     padding: 10px;
 }
 /*--12/12--*/
-.grid .douze-douze, .grid .w-12-12, .grid .w-1{
+.grid .twelve-twelve, .grid .w-12-12, .grid .w-1{
     width: 100%;
     float: left;
     padding: 10px;
+}
+
+/*To remove the display of HTML elements*/
+.gtfo {
+  display: none;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+/*-Elements Positions*/
+/*Position relative - class used on a container of absolute items*/
+
+.relative, .rel {
+  position: relative;
+}
+
+/*Position absolute - to place object in corners of its closest positioned ancestor*/
+.abstopright, .abstr {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.abstopleft, .abstl {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.absbottomright, .absbr {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.absbottomleft, .absbl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+/*to place object fixed in screen corners*/
+.fixtopright, .fixtr {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.fixtopleft, .fixtl {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.fixbottomright, .fixbr {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.fixbottomleft, .fixbl {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+/*positionned with float*/
+.goleft {
+  float:left;
+}
+.goright {
+  float: right;
+}
+
+/*place an element with this class to ignore float, for these to place below */
+.clear {
+  clear: both;
+}
+/**/
+.clearfix {
+  overflow: auto;
+}
+
+/*-Elements properties : property precision value*/
+/*-Padding */
+.padding-s, .p-s {
+  padding: 2em;
+}
+.padding-m, .p-m {
+  padding: 7em;
+}
+.padding-l, .p-l{
+  padding: 15em;
+}
+
+.paddingtop-s, .pt-s {
+  padding-top: 2em;
+}
+.paddingtop-m, .pt-m  {
+  padding-top: 7em;
+}
+.paddingtop-l, .pt-l {
+  padding-top: 15em;
+}
+
+.paddingright-s, .pr-s {
+  padding-right: 2em;
+}
+.paddingright-m, .pr-m  {
+  padding-right: 7em;
+}
+.paddingright-l, .pr-l {
+  padding-right: 15em;
+}
+
+.paddingbottom-s, .pb-s {
+  padding-bottom: 2em;
+}
+.paddingbottom-m, .pb-m  {
+  padding-bottom: 7em;
+}
+.paddingbottom-l, .pb-l {
+  padding-bottom: 15em;
+}
+
+.paddingleft-s, .pl-s {
+  padding-left: 2em;
+}
+.paddingleft-m, .pl-m {
+  padding-left: 7em;
+}
+.paddingleft-l, .pl-l {
+  padding-left: 15em;
+}
+
+.paddingax-s, .px-s {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.paddingax-m, .px-m  {
+  margin-left: 7em;
+  margin-right: 7em;
+}
+.paddingax-l, .px-l {
+  margin-left: 15em;
+  margin-right: 15em;
+}
+
+.paddingay-s, .py-s {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.paddingay-m, .py-m {
+  margin-top: 7em;
+  margin-bottom: 7em;
+}
+.paddingay-l, .py-l {
+  margin-top: 15em;
+  margin-bottom: 15em;
+}
+
+/*-Margins*/
+.margin-s, .m-s {
+  margin: 2em;
+}
+.margin-m, .m-m {
+  margin: 7em;
+}
+.margin-l, .m-l {
+  margin: 15em;
+}
+
+.margintop-s, .mt-s {
+  margin-top: 2em;
+}
+.margintop-m, .mt-m {
+  margin-top: 7em;
+}
+.margintop-l, .mt-l {
+  margin-top: 15em;
+}
+
+.marginright-s, .mr-s {
+  margin-right: 2em;
+}
+.marginright-m, .mr-m {
+  margin-right: 7em;
+}
+.marginright-l, .mr-l {
+  margin-right: 15em;
+}
+
+.marginbottom-s, .mb-m {
+  margin-bottom: 2em;
+}
+.marginbottom-m, .mb-m {
+  margin-bottom: 7em;
+}
+.marginbottom-l, .mb-l {
+  margin-bottom: 15em;
+}
+
+.marginleft-s, .ml-s {
+  margin-left: 2em;
+}
+.marginleft-m, .ml-m {
+  margin-left: 7em;
+}
+.marginleft-l, .ml-l {
+  margin-left: 15em;
+}
+
+.marginax-s, .mx-s {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.marginax-m, .mx-m {
+  margin-left: 7em;
+  margin-right: 7em;
+}
+.marginax-l, .mx-l {
+  margin-left: 15em;
+  margin-right: 15em;
+}
+
+.marginay-s, .my-s {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.marginay-m, .my-m  {
+  margin-top: 7em;
+  margin-bottom: 7em;
+}
+.marginay-l, .my-l {
+  margin-top: 15em;
+  margin-bottom: 15em;
+}
+
+/*a class to center an object horizontally*/
+.center {
+  margin: 0 auto;
+}
+
+.img-rounded {
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+.img-circle {
+  -webkit-border-radius: 500px;
+     -moz-border-radius: 500px;
+          border-radius: 500px;
+}
+
+/*-Elements sizes*/
+/*width*/
+.w100p {width: 100px;}
+.w200p {width: 200px;}
+.w300p {width: 300px;}
+.w400p {width: 400px;}
+.w500p {width: 500px;}
+.w600p {width: 600px;}
+.w700p {width: 700px;}
+.w800p {width: 800px;}
+.w900p {width: 900px;}
+.w1000p {width: 1000px;
+}
+/*- For those who want some percentage widths, but don't want to bother with the grid*/
+/*1 quarter of its closest ancestor*/
+.w-1-4 {
+  width: 25%;
+}
+/*1 third of its closest ancestor*/
+.w-1-3 {
+  width: calc(100%/3);
+}
+/*half of its closest ancestor*/
+.w-1-2 {
+  width: 50%;
+}
+/*2 third of its closest ancestor*/
+.w-2-3 {
+  width: calc(100%*2/3);
+}
+/*3 quarters of its closest ancestor*/
+.w-3-4 {
+  width: 75%;
+}
+
+/*-Height*/
+.h100p {height: 100px;}
+.h200p {height: 200px;}
+.h300p {height: 300px;}
+.h400p {height: 400px;}
+.h500p {height: 500px;}
+.h600p {height: 600px;}
+.h700p {height: 700px;}
+.h800p {height: 800px;}
+.h900p {height: 900px;}
+.h1000p {height: 1000px;}
+
+/**Positions**/
+/*Position absolute default top left*/
+
+/*Border*/
+.border{
+  border: 1px solid black;
+}
+.border2{
+  border: 2px solid black;
+}
+.border3{
+  border: 3px solid black;
+}
+.border4{
+  border: 4px solid black;
+}
+
+/*Color font*/
+.redf{
+  color:red;
+}
+.yellowf{
+  color: yellow;
+}
+.bluef{
+  color: blue;
+}
+.greenf{
+  color: green;
+}
+.whitef{
+  color: white;
+}
+.blackf{
+  color: black;
+}
+.brownf{
+  color: brown;
+}
+.greyf{
+  color: grey;
+}
+.orangef{
+  color: orange;
+}
+.violetf{
+  color: violet;
+}
+.purplef{
+  color: purple;
+}
+.rosef{
+  color: pink;
+}
+
+/*Color background*/
+.redbg{
+  background-color:red;
+}
+.yellowbg{
+  background-color: yellow;
+}
+.bluebg{
+  background-color: blue;
+}
+.greenbg{
+  background-color: green;
+}
+.whitebg{
+  background-color: white;
+}
+.blackbg{
+  background-color: black;
+}
+.brownbg{
+  background-color: brown;
+}
+.greybg{
+  background-color: grey;
+}
+.orangebg{
+  background-color: orange;
+}
+.violetbg{
+  background-color: violet;
+}
+.purplebg{
+  background-color: purple;
+}
+.rosebg{
+  background-color: pink;
 }
