@@ -1,17 +1,6 @@
-/* test html*/
-.element {
-  border: 2px solid black;
-  border-radius: 2px;
-  height: 200px;
-}
-
-
-
-
-
 /* Grille responsive */
 
-.grille, .element {
+.grille, .borderbox{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -25,72 +14,96 @@
     clear: both;
 }
 
-.grille .element {
-    float: left;
-    width: 100%;
-    padding: 10px;
-}
-
 
 /* Regle fixant la largeur de l'espace externe (double de l'espace interne) */
 
-.grille .element:first-child {
+.grid:first-child {
     padding-left: 20px;
 }
 
-.grille .element:last-child {
+.grid:last-child {
     padding-right: 20px;
 }
 
 
 /* Annule les espace entre element*/
 
-.no-space .element, .element.no-space {
+.no-space {
     padding: 0;
 }
 
 
 /* Largeur des elements */
-
-.grille .full, .grille .w-1-1 {
-    width: 100%;
+/*--1/12--*/
+.grid .un-douze, .grille .w-1-12 {
+    width: calc(100%/12);
+    float: left;
+    padding: 10px;
 }
-
-.grille .demi, .grille .w-1-2 {
+/*--2/12--*/
+.grid .deux-douze, .grille .w-1-6, .grille .w-2-12 {
+    width: calc(100%/6);
+    float: left;
+    padding: 10px;
+}
+/*--3/12--*/
+.grid .trois-douze, .grille .w-1-4, .grille .w-3-12 {
+    width: calc(300%/12);
+    float: left;
+    padding: 10px;
+}
+/*--4/12--*/
+.grid .quatre-douze, .grille .w-1-3,.grille .w-2-6, .grille .w-4-12 {
+    width: calc(100%/3);
+    float: left;
+    padding: 10px;
+}
+/*--5/12--*/
+.grid .cinq-douze, .grille .w-5-12 {
+    width: calc(500%/12);
+    float: left;
+    padding: 10px;
+}
+/*--6/12--*/
+.grid .six-douze, .grille .w-1-2, .grille .w-2-4, .grille .w-3-6, .grille .w-6-12{
     width: 50%;
+    float: left;
+    padding: 10px;
 }
-
-.grille .un-tier, .grille .w-1-3 {
-    width: 33.3332%;
+/*--7/12--*/
+.grid .sept-douze, .grille .w-7-12 {
+    width: calc(700%/12);
+    float: left;
+    padding: 10px;
 }
-
-.grille .deux-tier, .grille .w-2-3 {
-    width: 66.6665%;
+/*--8/12--*/
+.grid .huit-douze, .grille .w-2-3,.grille .w-4-6, .grille .w-8-12 {
+    width: calc(200%/3);
+    float: left;
+    padding: 10px;
 }
-
-.grille .un-quart, .grille .w-1-4 {
-    width: 25%;
-}
-
-.grille .trois-quart, .grille .w-3-4 {
+/*--9/12--*/
+.grid .neuf-douze, .grille .w-3-4, .grille .w-9-12 {
     width: 75%;
+    float: left;
+    padding-right: 10px;
+    padding-bottom: 10px;
 }
-
-.grille .un-cinq, .grille .w-1-5 {
-    width: 20%;
+/*--10/12--*/
+.grid .dix-douze, .grille .w-5-6, .grille .w-10-12 {
+    width: calc(500%/6);
+    float: left;
+    padding: 10px;
 }
-
-.grille .deux-cinq, .grille .w-2-5 {
-    width: 40%;
+/*--11/12--*/
+.grid .onze-douze, .grille .w-11-12 {
+    width: calc(1100%/12);
+    float: left;
+    padding: 10px;
 }
-
-.grille .trois-cinq, .grille .w-3-5 {
-    width: 60%;
+/*--12/12--*/
+.grid .douze-douze, .grille .w-12-12, .grille .w-1{
+    width: 100%;
+    float: left;
+    padding: 10px;
 }
-
-.grille .quatre-cinq, .grille .w-4-5 {
-    width: 80%;
-}
-
-
-/* Partie Responsive */
