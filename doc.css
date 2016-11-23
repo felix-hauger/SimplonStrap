@@ -1,0 +1,28 @@
+.doccenter{
+  text-align: center;
+}
+.doccolor1{
+  background-color: lightblue;
+}
+.doccolor2{
+  background-color: lightgreen;
+}
+.docheight{
+  height: 35px;
+}
+
+.doccolor3{
+  background-color: tomato;
+}
+.doccolor4{
+  background-color: #9b59b6;
+}
+.doccolor5{
+  background-color: #e67e22;
+}
+.doccolor6{
+  background-color: #C8B560;
+}
+p{
+  margin-left: 10px;
+}
