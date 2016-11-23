@@ -7,18 +7,46 @@ div, textarea, table, td, th, code, pre, samp {
     -o-hyphens: auto;
     hyphens: auto;
 }
+/*To formate DOM's content to its base value*/
+/*To remove any margin or border, reset font size & font style, reset the vertical alignment to its default value*/
+html, body, div, span, applet,
+h1, h2, h3, h4, h5, h6, p, blockquote,
+a, big, cite, code,
+em, img,
+small, strike, strong, tt,
+b, u, i,
+ol, ul, li,
+form, label, legend,
+table,
+article, aside, canvas,
+figure, figcaption, footer, header,
+menu, nav, output, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+	font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
 /*To remove bullets from bulleted lists*/
-ul {
+ul, li {
 	list-style: none;
 }
 /*To remove underlining or any other effect on links*/
-a {
+a, a:target, a:visited, a:active {
   text-decoration: none;
+  color: black;
 }
 
 /*-Elements Positions*/
+/*Position relative - to place an object compared to its starting position*/
 
-/*to place object in corners of its closest positioned ancestor*/
+.relative {
+  position: relative;
+}
+
+/*Position absolute - to place object in corners of its closest positioned ancestor*/
 .abstopright {
   position: absolute;
   top: 0;
@@ -68,9 +96,13 @@ a {
   float: right;
 }
 
-/*place a div with this class between two others to ignore float, for these to place below */
-.clearfix {
+/*place an element with this class to ignore float, for these to place below */
+.clear {
   clear: both;
+}
+/**/
+.clearfix {
+  overflow: auto;
 }
 
 /*-Elements properties : property precision value*/
@@ -328,11 +360,7 @@ a {
 /**Positions**/
 /*Position absolute default top left*/
 
-/*Position relative*/
 
-.relative {
-    position: relative;
-}
 
 /*Border*/
 .border{

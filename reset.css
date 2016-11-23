@@ -4,11 +4,11 @@ html, body, div, span, applet,
 h1, h2, h3, h4, h5, h6, p, blockquote,
 a, big, cite, code,
 em, img,
-small, strike, strong, sub, sup, tt,
-b, u, i, center,
+small, strike, strong, tt,
+b, u, i,
 ol, ul, li,
 form, label, legend,
-table, caption,
+table,
 article, aside, canvas,
 figure, figcaption, footer, header,
 menu, nav, output, section {
@@ -25,7 +25,7 @@ ul, li {
 	list-style: none;
 }
 /*To remove underlining or any other effect on links*/
-a {
+a, a:target, a:visited, a:active {
   text-decoration: none;
   color: black;
 }
