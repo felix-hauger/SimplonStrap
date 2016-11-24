@@ -1,17 +1,9 @@
 
-/* hyphens & too long words go to next line */
-div, textarea, table, td, th, code, pre, samp {
-    word-wrap: break-word;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    -o-hyphens: auto;
-    hyphens: auto;
-}
-/*To formate DO-m, 's content to its base value*/
+
+/*To formate DOM's content to its base value, used because of differences between web browsers*/
 /*To remove any margin or border, reset font size & font style, reset the vertical alignment to its default value*/
 html, body, div, span, applet,
-h1, h2, h3, h4, h5, h6, p, blockquote,
+p, blockquote,
 a, big, cite, code,
 em, img,
 small, strike, strong, tt,
@@ -29,7 +21,15 @@ menu, nav, output, section {
   font: inherit;
   vertical-align: baseline;
 }
-
+/* hyphens & too long words go to next line */
+div, textarea, table, td, th, code, pre, samp {
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+}
 /*To remove bullets from bulleted lists*/
 ul, li {
 	list-style: none;
@@ -39,34 +39,62 @@ a, a:target, a:visited, a:active {
   text-decoration: none;
   color: black;
 }
-/*- Flex*/
+/*-Flex*/
 
-.flex {
+[class*="flex-container"],
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-}
-/*To */
-.flexwrap, .fwrap {
-  flex-wrap: wrap;
-}
-.flexcol, .fcol {
-  flex-direction: column;
-}
-.flexrow, .frow {
-  flex-direction: row;
-}
-.flex {
-  align-items: center;
-  align-items: flex-start;
-  align-items: flex-end;
-  align-items: baseline;
-}
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.flex-container-h {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.flex-container-v {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.flex-item-fluid {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 0; }
+
+.flex-item-first,
+.item-first {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1; }
+
+.flex-item-medium,
+.item-medium {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0; }
+
+.flex-item-last,
+.item-last {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1; }
+
+.flex-item-center,
+.item-center {
+  margin: auto; }
 
 /*Inline element with modifiables dimensions*/
 .inlineblock, .inbl {
   display: inline-block;
 }
 
-/* Grille responsive */
+/*- The Responsive Grid */
 
 .grid, .borderbox{
     -webkit-box-sizing: border-box;
@@ -81,7 +109,7 @@ a, a:target, a:visited, a:active {
     clear: both;
 }
 
-/* Regle fixant la largeur de l'espace externe (double de l'espace interne) */
+/* Rule for extern padding (double of intern padding) */
 
 .grid:first-child {
     padding-left: 20px;
@@ -97,7 +125,7 @@ a, a:target, a:visited, a:active {
     padding: 0;
 }
 
-/* Largeur des elements */
+/* Grid Widths */
 /*--1/12--*/
 .grid .one-twelve, .grid .w-1-12 {
     width: calc(100%/12);
@@ -171,12 +199,51 @@ a, a:target, a:visited, a:active {
     float: left;
     padding: 10px;
 }
-
-/*To remove the display of HTML elements*/
-.gtfo {
-  display: none;
+/*-The Navbar*/
+.navbar {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+.navbar ul {
+    display: flex;
+    font-family: arial;
+    background-color: transparent;
+    height: 40px;
 }
 
+.navbar ul li {
+    display: flex;
+    flex-grow: 1;
+    box-sizing: border-box;
+    height: 100%;
+    justify-content: center;
+    padding: 10px 0px;
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+    font-size: 1.2em;
+    border-left: 1px solid #bdc3c7;
+    border-right: 1px solid #bdc3c7;
+}
+
+.navbar ul li:hover {
+    box-shadow: inset 0 3px 5px #7f8c8d;
+    border-top: 13px;
+    transition: 0.2s;
+}
+.navbar ul a {
+  width: 100%;
+}
+
+/*To remove the display of HTML elements*/
+.nodisplay, .gtfo {
+  display: none !important;
+}
+/*Finally I want it back...*/
+.is-visible, .show {
+  display: block !important;
+}
+/*To hide an element*/
 .hide {
   visibility: hidden;
 }
@@ -209,7 +276,13 @@ a, a:target, a:visited, a:active {
   bottom: 0;
   left: 0;
 }
-/*to place object fixed in screen corners*/
+/*to place object fixed in screen corners - you can use fix class and fill in value otherwise*/
+
+.fix {
+  position: fixed;
+  top: ;
+  right: ;
+}
 .fixtopright, .fixtr {
   position: fixed;
   top: 0;
@@ -231,10 +304,10 @@ a, a:target, a:visited, a:active {
   left: 0;
 }
 /*positionned with float*/
-.goleft {
+.goleft, .l {
   float:left;
 }
-.goright {
+.goright, .r {
   float: right;
 }
 
@@ -402,17 +475,19 @@ a, a:target, a:visited, a:active {
   margin-bottom: 15em;
 }
 
-/*a class to center an object horizontally*/
+/*class to center an object horizontally*/
 .center {
   margin: 0 auto;
 }
 
-.img-rounded {
+/*class to round elements*/
+.rounded {
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
           border-radius: 6px;
 }
-.img-circle {
+/*class to make circle elements*/
+.circle {
   -webkit-border-radius: 500px;
      -moz-border-radius: 500px;
           border-radius: 500px;
@@ -420,6 +495,9 @@ a, a:target, a:visited, a:active {
 
 /*-Elements sizes*/
 /*width*/
+.w30p {width: 30px;}
+.w50p {width: 50px;}
+.w80p {width: 80px;}
 .w100p {width: 100px;}
 .w200p {width: 200px;}
 .w300p {width: 300px;}
@@ -454,7 +532,11 @@ a, a:target, a:visited, a:active {
 }
 
 /*-Height*/
+.h30p {height: 30px;}
+.h50p {height: 50px;}
+.h80p {height: 80px;}
 .h100p {height: 100px;}
+.h150p {height: 100px;}
 .h200p {height: 200px;}
 .h300p {height: 300px;}
 .h400p {height: 400px;}
@@ -483,77 +565,59 @@ a, a:target, a:visited, a:active {
 }
 
 /*Color font*/
-.redf{
-  color:red;
-}
-.yellowf{
-  color: yellow;
-}
-.bluef{
-  color: blue;
-}
-.greenf{
-  color: green;
-}
-.whitef{
-  color: white;
-}
-.blackf{
-  color: black;
-}
-.brownf{
-  color: brown;
-}
-.greyf{
-  color: grey;
-}
-.orangef{
-  color: orange;
-}
-.violetf{
-  color: violet;
-}
-.purplef{
-  color: purple;
-}
-.rosef{
-  color: pink;
-}
+.redf {color:red;}
+
+.yellowf {color: yellow;}
+
+.bluef {color: blue;}
+
+.greenf {color: green;}
+
+.whitef {color: white;}
+
+.blackf {color: black;}
+
+.brownf {color: brown;}
+
+.greyf {color: grey;}
+
+.orangef {color: orange;}
+
+.violetf {color: violet;}
+
+.purplef {color: purple;}
+
+.rosef {color: pink;}
+
 
 /*Color background*/
-.redbg{
-  background-color:red;
-}
-.yellowbg{
-  background-color: yellow;
-}
-.bluebg{
-  background-color: blue;
-}
-.greenbg{
-  background-color: green;
-}
-.whitebg{
-  background-color: white;
-}
-.blackbg{
-  background-color: black;
-}
-.brownbg{
-  background-color: brown;
-}
-.greybg{
-  background-color: grey;
-}
-.orangebg{
-  background-color: orange;
-}
-.violetbg{
-  background-color: violet;
-}
-.purplebg{
-  background-color: purple;
-}
-.rosebg{
-  background-color: pink;
+.redbg {background-color:red;}
+
+.yellowbg {background-color: yellow;}
+
+.bluebg {background-color: blue;}
+
+.greenbg {background-color: green;}
+
+.whitebg {background-color: white;}
+
+.blackbg {background-color: black;}
+
+.brownbg {background-color: brown;}
+
+.greybg {background-color: grey;}
+
+.orangebg {background-color: orange;}
+
+.violetbg {background-color: violet;}
+
+.purplebg {background-color: purple;}
+
+.rosebg {background-color: pink;}
+
+
+@media all (max-width:768px){
+  .grid>* {
+    width:100%;
+  }
 }
