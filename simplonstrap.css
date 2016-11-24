@@ -109,20 +109,14 @@ a, a:target, a:visited, a:active {
     clear: both;
 }
 
-/* Rule for extern padding (double of intern padding) */
-
-.grid:first-child {
-    padding-left: 20px;
-}
-
-.grid:last-child {
-    padding-right: 20px;
-}
 
 /* Cancel spaces between elements*/
 
 .no-space {
     padding: 0;
+}
+.grid *{
+  box-sizing: border-box;
 }
 
 /* Grid Widths */
