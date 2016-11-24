@@ -1,16 +1,9 @@
-/* hyphens & too long words go to next line */
-div, textarea, table, td, th, code, pre, samp {
-    word-wrap: break-word;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    -o-hyphens: auto;
-    hyphens: auto;
-}
-/*To formate DOM's content to its base value*/
+
+
+/*To formate DOM's content to its base value, used because of differences between web browsers*/
 /*To remove any margin or border, reset font size & font style, reset the vertical alignment to its default value*/
 html, body, div, span, applet,
-h1, h2, h3, h4, h5, h6, p, blockquote,
+p, blockquote,
 a, big, cite, code,
 em, img,
 small, strike, strong, tt,
@@ -28,7 +21,15 @@ menu, nav, output, section {
   font: inherit;
   vertical-align: baseline;
 }
-
+/* hyphens & too long words go to next line */
+div, textarea, table, td, th, code, pre, samp {
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+}
 /*To remove bullets from bulleted lists*/
 ul, li {
 	list-style: none;
@@ -38,61 +39,275 @@ a, a:target, a:visited, a:active {
   text-decoration: none;
   color: black;
 }
+/*-Flex*/
+
+[class*="flex-container"],
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.flex-container-h {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.flex-container-v {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.flex-item-fluid {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 0; }
+
+.flex-item-first,
+.item-first {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1; }
+
+.flex-item-medium,
+.item-medium {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0; }
+
+.flex-item-last,
+.item-last {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1; }
+
+.flex-item-center,
+.item-center {
+  margin: auto; }
+
+/*Inline element with modifiables dimensions*/
+.inlineblock, .inbl {
+  display: inline-block;
+}
+
+/*- The Responsive Grid */
+
+.grid, .borderbox{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Grid Display*/
+
+.grid {
+    display: block;
+    clear: both;
+}
+
+/* Rule for extern padding (double of intern padding) */
+
+.grid:first-child {
+    padding-left: 20px;
+}
+
+.grid:last-child {
+    padding-right: 20px;
+}
+
+/* Cancel spaces between elements*/
+
+.no-space {
+    padding: 0;
+}
+
+/* Grid Widths */
+/*--1/12--*/
+.grid .one-twelve, .grid .w-1-12 {
+    width: calc(100%/12);
+    float: left;
+    padding: 10px;
+}
+/*--2/12--*/
+.grid .two-twelve, .grid .w-1-6, .grid .w-2-12 {
+    width: calc(100%/6);
+    float: left;
+    padding: 10px;
+}
+/*--3/12--*/
+.grid .three-twelve, .grid .w-1-4, .grid .w-3-12 {
+    width: calc(300%/12);
+    float: left;
+    padding: 10px;
+}
+/*--4/12--*/
+.grid .four-twelve, .grid .w-1-3,.grid .w-2-6, .grid .w-4-12 {
+    width: calc(100%/3);
+    float: left;
+    padding: 10px;
+}
+/*--5/12--*/
+.grid .five-twelve, .grid .w-5-12 {
+    width: calc(500%/12);
+    float: left;
+    padding: 10px;
+}
+/*--6/12--*/
+.grid .six-twelve, .grid .w-1-2, .grid .w-2-4, .grid .w-3-6, .grid .w-6-12{
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+/*--7/12--*/
+.grid .seven-twelve, .grid .w-7-12 {
+    width: calc(700%/12);
+    float: left;
+    padding: 10px;
+}
+/*--8/12--*/
+.grid .eight-twelve, .grid .w-2-3,.grid .w-4-6, .grid .w-8-12 {
+    width: calc(200%/3);
+    float: left;
+    padding: 10px;
+}
+/*--9/12--*/
+.grid .nine-twelve, .grid .w-3-4, .grid .w-9-12 {
+    width: 75%;
+    float: left;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+/*--10/12--*/
+.grid .ten-twelve, .grid .w-5-6, .grid .w-10-12 {
+    width: calc(500%/6);
+    float: left;
+    padding: 10px;
+}
+/*--11/12--*/
+.grid .onze-twelve, .grid .w-11-12 {
+    width: calc(1100%/12);
+    float: left;
+    padding: 10px;
+}
+/*--12/12--*/
+.grid .twelve-twelve, .grid .w-12-12, .grid .w-1{
+    width: 100%;
+    float: left;
+    padding: 10px;
+}
+/*-The Navbar*/
+.navbar {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+.navbar ul {
+    display: flex;
+    font-family: arial;
+    background-color: transparent;
+    height: 40px;
+}
+
+.navbar ul li {
+    display: flex;
+    flex-grow: 1;
+    box-sizing: border-box;
+    height: 100%;
+    justify-content: center;
+    padding: 10px 0px;
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+    font-size: 1.2em;
+    border-left: 1px solid #bdc3c7;
+    border-right: 1px solid #bdc3c7;
+}
+
+.navbar ul li:hover {
+    box-shadow: inset 0 3px 5px #7f8c8d;
+    border-top: 13px;
+    transition: 0.2s;
+}
+.navbar ul a {
+  width: 100%;
+}
+
+/*To remove the display of HTML elements*/
+.nodisplay, .gtfo {
+  display: none !important;
+}
+/*Finally I want it back...*/
+.is-visible, .show {
+  display: block !important;
+}
+/*To hide an element*/
+.hide {
+  visibility: hidden;
+}
 
 /*-Elements Positions*/
-/*Position relative - to place an object compared to its starting position*/
+/*Position relative - class used on a container of absolute items*/
 
-.relative {
+.relative, .rel {
   position: relative;
 }
 
 /*Position absolute - to place object in corners of its closest positioned ancestor*/
-.abstopright {
+.abstopright, .abstr {
   position: absolute;
   top: 0;
   right: 0;
 }
-.abstopleft {
+.abstopleft, .abstl {
   position: absolute;
   top: 0;
   left: 0;
 }
-.absbottomright {
+.absbottomright, .absbr {
   position: absolute;
   bottom: 0;
   right: 0;
 }
-.absbottomleft {
+.absbottomleft, .absbl {
   position: absolute;
   bottom: 0;
   left: 0;
 }
-/*to place object fixed in screen corners*/
-.fixtopright {
+/*to place object fixed in screen corners - you can use fix class and fill in value otherwise*/
+
+.fix {
+  position: fixed;
+  top: ;
+  right: ;
+}
+.fixtopright, .fixtr {
   position: fixed;
   top: 0;
   right: 0;
 }
-.fixtopleft {
+.fixtopleft, .fixtl {
   position: fixed;
   top: 0;
   left: 0;
 }
-.fixbottomright {
+.fixbottomright, .fixbr {
   position: fixed;
   bottom: 0;
   right: 0;
 }
-.fixbottomleft {
+.fixbottomleft, .fixbl {
   position: fixed;
   bottom: 0;
   left: 0;
 }
 /*positionned with float*/
-.goleft {
+.goleft, .l {
   float:left;
 }
-.goright {
+.goright, .r {
   float: right;
 }
 
@@ -107,352 +322,302 @@ a, a:target, a:visited, a:active {
 
 /*-Elements properties : property precision value*/
 /*-Padding */
-.paddingS {
+.padding-s, .p-s {
   padding: 2em;
 }
-.paddingM {
+.padding-m, .p-m {
   padding: 7em;
 }
-.paddingL {
+.padding-l, .p-l{
   padding: 15em;
 }
 
-.paddingtopS {
+.paddingtop-s, .pt-s {
   padding-top: 2em;
 }
-.paddingtopM {
+.paddingtop-m, .pt-m  {
   padding-top: 7em;
 }
-.paddingtopL {
+.paddingtop-l, .pt-l {
   padding-top: 15em;
 }
 
-.paddingrightS {
+.paddingright-s, .pr-s {
   padding-right: 2em;
 }
-.paddingrightM {
+.paddingright-m, .pr-m  {
   padding-right: 7em;
 }
-.paddingrightL {
+.paddingright-l, .pr-l {
   padding-right: 15em;
 }
 
-.paddingbottomS {
+.paddingbottom-s, .pb-s {
   padding-bottom: 2em;
 }
-.paddingbottomM {
+.paddingbottom-m, .pb-m  {
   padding-bottom: 7em;
 }
-.paddingbottomL {
+.paddingbottom-l, .pb-l {
   padding-bottom: 15em;
 }
 
-.paddingleftS {
+.paddingleft-s, .pl-s {
   padding-left: 2em;
 }
-.paddingleftM {
+.paddingleft-m, .pl-m {
   padding-left: 7em;
 }
-.paddingleftL {
+.paddingleft-l, .pl-l {
   padding-left: 15em;
 }
 
-.paddingaxS {
-  padding: 0 2em;
-}
-.paddingaxM {
-  padding: 0 7em;
-}
-.paddingaxL {
-  padding: 0 15em;
-}
-
-.paddingayS {
-  padding: 2em 0;
-}
-.paddingayM {
-  padding: 7em 0;
-}
-.paddingayL {
-  padding: 15em 0;
-}
-
-/*-Margins*/
-.marginS {
-  margin: 2em;
-}
-.marginM {
-  margin: 7em;
-}
-.marginL {
-  margin: 15em;
-}
-
-.margintopS {
+.paddingax-s, .px-s {
   margin-top: 2em;
+  margin-bottom: 2em;
 }
-.margintopM {
-  margin-top: 7em;
-}
-.margintopL {
-  margin-top: 15em;
-}
-
-.marginrightS {
-  margin-right: 2em;
-}
-.marginrightM {
+.paddingax-m, .px-m  {
+  margin-left: 7em;
   margin-right: 7em;
 }
-.marginrightL {
+.paddingax-l, .px-l {
+  margin-left: 15em;
   margin-right: 15em;
 }
 
-.marginbottomS {
-  margin-bottom: 2em;
+.paddingay-s, .py-s {
+  margin-left: 2em;
+  margin-right: 2em;
 }
-.marginbottomM {
+.paddingay-m, .py-m {
+  margin-top: 7em;
   margin-bottom: 7em;
 }
-.marginbottomL {
+.paddingay-l, .py-l {
+  margin-top: 15em;
   margin-bottom: 15em;
 }
 
-.marginleftS {
+/*-Margins*/
+.margin-s, .m-s {
+  margin: 2em;
+}
+.margin-m, .m-m {
+  margin: 7em;
+}
+.margin-l, .m-l {
+  margin: 15em;
+}
+
+.margintop-s, .mt-s {
+  margin-top: 2em;
+}
+.margintop-m, .mt-m {
+  margin-top: 7em;
+}
+.margintop-l, .mt-l {
+  margin-top: 15em;
+}
+
+.marginright-s, .mr-s {
+  margin-right: 2em;
+}
+.marginright-m, .mr-m {
+  margin-right: 7em;
+}
+.marginright-l, .mr-l {
+  margin-right: 15em;
+}
+
+.marginbottom-s, .mb-m {
+  margin-bottom: 2em;
+}
+.marginbottom-m, .mb-m {
+  margin-bottom: 7em;
+}
+.marginbottom-l, .mb-l {
+  margin-bottom: 15em;
+}
+
+.marginleft-s, .ml-s {
   margin-left: 2em;
 }
-.marginleftM {
+.marginleft-m, .ml-m {
   margin-left: 7em;
 }
-.marginleftL {
+.marginleft-l, .ml-l {
   margin-left: 15em;
 }
 
-.marginaxS {
-  margin: 0 2em;
+.marginax-s, .mx-s {
+  margin-left: 2em;
+  margin-right: 2em;
 }
-.marginaxM {
-  margin: 0 7em;
+.marginax-m, .mx-m {
+  margin-left: 7em;
+  margin-right: 7em;
 }
-.marginaxL {
-  margin: 0 15em;
-}
-
-.marginayS {
-  margin: 2em 0;
-}
-.marginayM {
-  margin: 7em 0;
-}
-.marginayL {
-  margin: 15em 0;
+.marginax-l, .mx-l {
+  margin-left: 15em;
+  margin-right: 15em;
 }
 
-/*a class to center an object horizontally*/
+.marginay-s, .my-s {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.marginay-m, .my-m  {
+  margin-top: 7em;
+  margin-bottom: 7em;
+}
+.marginay-l, .my-l {
+  margin-top: 15em;
+  margin-bottom: 15em;
+}
+
+/*class to center an object horizontally*/
 .center {
   margin: 0 auto;
 }
 
-.img-rounded {
+/*class to round elements*/
+.rounded {
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
           border-radius: 6px;
 }
+/*class to make circle elements*/
+.circle {
+  -webkit-border-radius: 500px;
+     -moz-border-radius: 500px;
+          border-radius: 500px;
+}
 
 /*-Elements sizes*/
 /*width*/
-.w100p {
-  width: 100px;
+.w30p {width: 30px;}
+.w50p {width: 50px;}
+.w80p {width: 80px;}
+.w100p {width: 100px;}
+.w200p {width: 200px;}
+.w300p {width: 300px;}
+.w400p {width: 400px;}
+.w500p {width: 500px;}
+.w600p {width: 600px;}
+.w700p {width: 700px;}
+.w800p {width: 800px;}
+.w900p {width: 900px;}
+.w1000p {width: 1000px;
 }
-.w200p {
-  width: 200px;
+/*- For those who want some percentage widths, but don't want to bother with the grid*/
+/*1 quarter of its closest ancestor*/
+.w-1-4 {
+  width: 25%;
 }
-.w300p {
-  width: 300px;
-}
-.w400p {
-  width: 400px;
-}
-.w500p {
-  width: 500px;
-}
-.w600p {
-  width: 600px;
-}
-.w700p {
-  width: 700px;
-}
-.w800p {
-  width: 800px;
-}
-.w900p {
-  width: 900px;
-}
-.w1000p {
-  width: 1000px;
-}
-
-/*1 huitième du parent*/
-.w1-8 {
-  width: calc(100%/8);
-}
-/*1 septième du parent*/
-.w1-7 {
-  width: calc(100%/7);
-}
-/*1 sixième du parent*/
-.w1-6 {
-  width: calc(100%/6);
-}
-/*1 cinquième du parent*/
-.w1-5 {
-  width: calc(100%/5);
-}
-/*1 quart du parent*/
-.w1-4 {
-  width: calc(100%/4);
-}
-/*1 tier du parent*/
-.w1-3 {
+/*1 third of its closest ancestor*/
+.w-1-3 {
   width: calc(100%/3);
 }
-/*2 tiers du parent*/
-.w2-3 {
-  width: calc(100%*2/3);
-}
-/*moitié du parent*/
-.w1-2 {
+/*half of its closest ancestor*/
+.w-1-2 {
   width: 50%;
 }
+/*2 third of its closest ancestor*/
+.w-2-3 {
+  width: calc(100%*2/3);
+}
+/*3 quarters of its closest ancestor*/
+.w-3-4 {
+  width: 75%;
+}
 
-/*height*/
-.h100p {
-  height: 100px;
-}
-.h200p {
-  height: 200px;
-}
-.h300p {
-  height: 300px;
-}
-.h400p {
-  height: 400px;
-}
-.h500p {
-  height: 500px;
-}
-.h600p {
-  height: 600px;
-}
-.h700p {
-  height: 700px;
-}
-.h800p {
-  height: 800px;
-}
-.h900p {
-  height: 900px;
-}
-.h1000p {
-  height: 1000px;
-}
+/*-Height*/
+.h30p {height: 30px;}
+.h50p {height: 50px;}
+.h80p {height: 80px;}
+.h100p {height: 100px;}
+.h150p {height: 100px;}
+.h200p {height: 200px;}
+.h300p {height: 300px;}
+.h400p {height: 400px;}
+.h500p {height: 500px;}
+.h600p {height: 600px;}
+.h700p {height: 700px;}
+.h800p {height: 800px;}
+.h900p {height: 900px;}
+.h1000p {height: 1000px;}
 
 /**Positions**/
 /*Position absolute default top left*/
-
-
 
 /*Border*/
 .border{
   border: 1px solid black;
 }
-
 .border2{
   border: 2px solid black;
 }
-
 .border3{
   border: 3px solid black;
 }
-
 .border4{
   border: 4px solid black;
 }
 
-
 /*Color font*/
-.redf{
-  color:red;
-}
-.yellowf{
-  color: yellow;
-}
-.bluef{
-  color: blue;
-}
-.greenf{
-  color: green;
-}
-.whitef{
-  color: white;
-}
-.blackf{
-  color: black;
-}
-.brownf{
-  color: brown;
-}
-.greyf{
-  color: grey;
-}
-.orangef{
-  color: orange;
-}
-.violetf{
-  color: violet;
-}
-.purplef{
-  color: purple;
-}
-.rosef{
-  color: pink;
-}
+.redf {color:red;}
+
+.yellowf {color: yellow;}
+
+.bluef {color: blue;}
+
+.greenf {color: green;}
+
+.whitef {color: white;}
+
+.blackf {color: black;}
+
+.brownf {color: brown;}
+
+.greyf {color: grey;}
+
+.orangef {color: orange;}
+
+.violetf {color: violet;}
+
+.purplef {color: purple;}
+
+.rosef {color: pink;}
 
 
 /*Color background*/
-.redbg{
-  color:red;
-}
-.yellowbg{
-  color: yellow;
-}
-.bluebg{
-  color: blue;
-}
-.greenbg{
-  color: green;
-}
-.whitebg{
-  color: white;
-}
-.blackbg{
-  color: black;
-}
-.brownbg{
-  color: brown;
-}
-.greybg{
-  color: grey;
-}
-.orangebg{
-  color: orange;
-}
-.violetbg{
-  color: violet;
-}
-.purplebg{
-  color: purple;
-}
-.rosebg{
-  color: pink;
+.redbg {background-color:red;}
+
+.yellowbg {background-color: yellow;}
+
+.bluebg {background-color: blue;}
+
+.greenbg {background-color: green;}
+
+.whitebg {background-color: white;}
+
+.blackbg {background-color: black;}
+
+.brownbg {background-color: brown;}
+
+.greybg {background-color: grey;}
+
+.orangebg {background-color: orange;}
+
+.violetbg {background-color: violet;}
+
+.purplebg {background-color: purple;}
+
+.rosebg {background-color: pink;}
+
+
+@media all (max-width:768px){
+  .grid>* {
+    width:100%;
+  }
 }
